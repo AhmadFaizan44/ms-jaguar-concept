@@ -11,7 +11,7 @@ function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 flex h-16 items-center justify-between bg-white px-[var(--margin)] text-navy">
       <a href="#top" aria-label="MS Jaguar, back to top" className="press flex items-center">
-        <Image src="/ms-jaguar-logo.png" alt="MS Jaguar" width={52} height={52} preload />
+        <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/ms-jaguar-logo.png`} alt="MS Jaguar" width={52} height={52} preload />
       </a>
       <a href={DEALERS} target="_blank" rel="noreferrer" className="btn btn-navy">Book a test ride</a>
     </header>
