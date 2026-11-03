@@ -1,0 +1,184 @@
+{
+  "bolt-graphite-grey": {
+    "width": 2532,
+    "height": 3622,
+    "widths": [
+      800,
+      1400,
+      2000
+    ],
+    "ground": 0.0367
+  },
+  "bolt-midnight-black": {
+    "width": 2505,
+    "height": 3598,
+    "widths": [
+      800,
+      1400,
+      2000
+    ],
+    "ground": 0.0278
+  },
+  "e125-black": {
+    "width": 2425,
+    "height": 2594,
+    "widths": [
+      800,
+      1400,
+      2000
+    ],
+    "ground": 0.0794
+  },
+  "e125-red": {
+    "width": 2262,
+    "height": 2864,
+    "widths": [
+      800,
+      1400,
+      2000
+    ],
+    "ground": 0.0296
+  },
+  "e70-black": {
+    "width": 1789,
+    "height": 1966,
+    "widths": [
+      800,
+      1400,
+      1789
+    ],
+    "ground": 0.0818
+  },
+  "e70-red": {
+    "width": 1737,
+    "height": 1939,
+    "widths": [
+      800,
+      1400,
+      1737
+    ],
+    "ground": 0.0828
+  },
+  "e70s-black": {
+    "width": 1856,
+    "height": 1870,
+    "widths": [
+      800,
+      1400
+    ],
+    "ground": 0.0893
+  },
+  "e70s-blue": {
+    "width": 1866,
+    "height": 1881,
+    "widths": [
+      800,
+      1400
+    ],
+    "ground": 0.0868
+  },
+  "e70s-red": {
+    "width": 1901,
+    "height": 1882,
+    "widths": [
+      800,
+      1400
+    ],
+    "ground": 0.0884
+  },
+  "legacy-arctic-white": {
+    "width": 824,
+    "height": 1024,
+    "widths": [
+      800,
+      824
+    ],
+    "ground": 0.0181
+  },
+  "legacy-midnight-black": {
+    "width": 852,
+    "height": 998,
+    "widths": [
+      800,
+      852
+    ],
+    "ground": 0.0213
+  },
+  "legacy-titanium-grey": {
+    "width": 866,
+    "height": 986,
+    "widths": [
+      800,
+      866
+    ],
+    "ground": 0.0198
+  },
+  "m1-crimson-black": {
+    "width": 2586,
+    "height": 3427,
+    "widths": [
+      800,
+      1400,
+      2000
+    ],
+    "ground": 0.0434
+  },
+  "m1-matte-black": {
+    "width": 2614,
+    "height": 3460,
+    "widths": [
+      800,
+      1400,
+      2000
+    ],
+    "ground": 0.0435
+  },
+  "m1-pearl-white": {
+    "width": 2677,
+    "height": 3522,
+    "widths": [
+      800,
+      1400,
+      2000
+    ],
+    "ground": 0.0304
+  },
+  "miso-blush-pink": {
+    "width": 2711,
+    "height": 3617,
+    "widths": [
+      800,
+      1400,
+      2000
+    ],
+    "ground": 0.0318
+  },
+  "miso-cream-white": {
+    "width": 1483,
+    "height": 1100,
+    "widths": [
+      800,
+      1400,
+      1483
+    ],
+    "ground": 0.0404
+  },
+  "miso-deep-black": {
+    "width": 2724,
+    "height": 3534,
+    "widths": [
+      800,
+      1400,
+      2000
+    ],
+    "ground": 0.0424
+  },
+  "miso3w-blush-pink": {
+    "width": 1391,
+    "height": 1311,
+    "widths": [
+      800
+    ],
+    "ground": 0.0212
+  }
+}

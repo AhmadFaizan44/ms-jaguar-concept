@@ -1,0 +1,532 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-text);
+  --font-heading: var(--font-display);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+/* MS Jaguar concept: tokens and the few shared pieces */
+@theme inline {
+  --color-navy: #12244a;
+  --color-gold: #e5ae27;
+  --color-bone: #f5f2ec;
+}
+
+:root {
+  --margin: clamp(1.25rem, 3vw, 2.5rem);
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-tile: clamp(2.25rem, 1.6rem + 2vw, 3.5rem);
+  --step-head: clamp(2.5rem, 1.2rem + 5vw, 5.5rem);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --font-sans: var(--font-text);
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+  scroll-padding-top: 4rem;
+}
+
+body {
+  background: var(--color-bone);
+  color: var(--color-navy);
+  font-family: var(--font-text), sans-serif;
+  font-size: var(--step-body);
+  line-height: 1.5;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-navy);
+}
+
+:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+
+.display {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+button,
+a,
+label {
+  touch-action: manipulation;
+}
+
+button {
+  cursor: pointer;
+}
+
+.press {
+  transition: transform 140ms var(--ease-out), opacity 160ms ease;
+}
+.press:active {
+  transform: scale(0.97);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.65rem 1.25rem;
+  font-size: var(--step-body);
+  font-weight: 700;
+  line-height: 1.1;
+  user-select: none;
+  transition: transform 140ms var(--ease-out), opacity 160ms ease, background-color 200ms ease, color 200ms ease;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn-navy {
+  background: var(--color-navy);
+  color: #fff;
+}
+.btn-gold {
+  background: var(--color-gold);
+  color: var(--color-navy);
+}
+.btn-quiet {
+  background: #e7e2d8;
+  color: var(--color-navy);
+}
+
+.link {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.swatch {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+.swatch::before {
+  content: "";
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--paint);
+  outline: 2px solid rgb(255 255 255 / 0.9);
+  transition: transform 160ms var(--ease-out);
+}
+.swatch:active::before {
+  transform: scale(0.9);
+}
+.swatch[aria-pressed="true"]::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+}
+
+.swatch-large {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  cursor: pointer;
+}
+.swatch-large::before {
+  content: "";
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--paint);
+  outline: 2px solid rgb(255 255 255 / 0.9);
+  transition: transform 160ms var(--ease-out);
+}
+.swatch-large:active::before {
+  transform: scale(0.9);
+}
+.swatch-large:has(:checked)::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+}
+.swatch-large:has(:focus-visible) {
+  outline: 3px solid currentColor;
+  outline-offset: 2px;
+}
+
+.battery {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid var(--ink);
+}
+.battery[data-checked="true"] {
+  background: var(--ink);
+  color: var(--field);
+}
+.battery:has(:focus-visible) {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* A line-up tile: wears its first finish; choosing another raises that colour from the floor. */
+.tile {
+  background: var(--tile-base);
+  color: var(--tile-ink);
+  transition: color 220ms ease;
+}
+.tile-field {
+  background: var(--tile-field);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 420ms var(--ease-out), background-color 280ms ease;
+}
+.tile-field[data-raised="true"] {
+  transform: none;
+}
+.tile-detail {
+  transition: opacity 220ms ease, transform 320ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tile .tile-detail {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  .tile:hover .tile-detail,
+  .tile:focus-within .tile-detail {
+    opacity: 1;
+    transform: none;
+  }
+  .hover-opacity:hover {
+    opacity: 1;
+  }
+  .btn:hover {
+    opacity: 0.88;
+  }
+  .city {
+    transition: transform 240ms var(--ease-out);
+  }
+  .city:hover {
+    transform: translateX(10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile-field,
+  .tile-detail,
+  .press,
+  .btn,
+  .city {
+    transition-duration: 1ms;
+  }
+}
+
+/* The big wheel: every per-frame change is a transform or opacity set from hero.tsx. */
+.wheel-scroll {
+  --rim-top: 70%;
+  --radius: max(100vw, 1050px);
+  --ride-height: 60%;
+  --ride-width: min(46vw, 640px);
+  position: relative;
+  height: calc((0.8 + 7 + 0.4) * 85svh + 100svh - 4rem);
+  color: var(--color-navy);
+}
+.wheel-stage {
+  position: sticky;
+  top: 4rem;
+  height: calc(100svh - 4rem);
+  overflow: hidden;
+  touch-action: pan-y;
+  cursor: grab;
+}
+.wheel-stage.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+.wheel-rim {
+  position: absolute;
+  top: var(--rim-top);
+  left: 50%;
+  width: calc(var(--radius) * 2);
+  height: calc(var(--radius) * 2);
+  margin-left: calc(var(--radius) * -1);
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.62);
+  border: 4px solid var(--color-navy);
+}
+.wheel-ticks {
+  position: absolute;
+  top: calc(var(--rim-top) - 2%);
+  left: 0;
+  width: 100%;
+  height: calc(100% - var(--rim-top) + 2%);
+  pointer-events: none;
+}
+.wheel-rides {
+  position: absolute;
+  inset: 0;
+}
+.wheel-ride {
+  position: absolute;
+  left: calc(50% - var(--ride-width) / 2);
+  /* Stands the tyres a little inside the rim, so the rim reads as the horizon behind. */
+  bottom: calc(100% - var(--rim-top) - 6%);
+  width: var(--ride-width);
+  height: var(--ride-height);
+  transform-origin: 50% 100%;
+  will-change: transform, opacity;
+  touch-action: pan-y;
+}
+.wheel-ride-lean {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 100%;
+}
+.wheel-ride-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.wheel-intro,
+.wheel-name {
+  position: absolute;
+  top: clamp(1.25rem, 4vh, 2.75rem);
+  left: var(--margin);
+  z-index: 110;
+  pointer-events: none;
+}
+.wheel-intro a,
+.wheel-specs,
+.wheel-controls {
+  pointer-events: auto;
+}
+.wheel-details {
+  position: absolute;
+  inset: 0;
+  z-index: 120;
+  pointer-events: none;
+}
+.wheel-facts {
+  position: absolute;
+  top: clamp(1.25rem, 4vh, 2.75rem);
+  right: var(--margin);
+  text-align: right;
+}
+.wheel-fact-list {
+  display: grid;
+  gap: 0.9rem;
+}
+.wheel-fact-list dt {
+  font-size: var(--step-body);
+}
+.wheel-fact-list dd {
+  font-size: var(--step-lead);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.wheel-controls {
+  position: absolute;
+  right: 0;
+  bottom: clamp(1rem, 3vh, 2rem);
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 0 var(--margin);
+}
+.wheel-names {
+  display: flex;
+  gap: 1.25rem;
+}
+.wheel-count {
+  font-weight: 700;
+}
+.wheel-arrow {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  flex: none;
+  background: var(--color-navy);
+  color: #fff;
+  transition: transform 140ms var(--ease-out), opacity 160ms ease;
+}
+.wheel-arrow:active {
+  transform: scale(0.94);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .wheel-arrow:hover {
+    opacity: 0.86;
+  }
+}
+
+@media (max-width: 767px) {
+  .wheel-scroll {
+    --rim-top: 69%;
+    --radius: 118vw;
+    --ride-height: 47%;
+    --ride-width: 86vw;
+  }
+  .wheel-facts {
+    top: auto;
+    right: var(--margin);
+    bottom: 5.25rem;
+    left: var(--margin);
+    text-align: left;
+  }
+  .wheel-fact-list {
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+  .wheel-fact-list dd {
+    font-size: var(--step-body);
+  }
+  .wheel-names {
+    display: none;
+  }
+  .wheel-controls {
+    justify-content: space-between;
+  }
+}
